@@ -29,27 +29,26 @@ body {
     line-height: 1.6;
 }
 
-/* ESTILOS DO CABEÇALHO (Header) - ATUALIZADO
+/* ESTILOS DO CABEÇALHO (Header) - Design Original
 */
 .header-ctb {
     background-color: var(--texto-branco);
     padding: 20px 5%; /* 5% de margem nas laterais */
     display: flex;
-    justify-content: space-between; /* Mantém Título na esquerda e Logo na direita */
+    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #e0e0e0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo-header {
-    /* ATUALIZADO: Conforme solicitado */
-    height: 120px; 
-    width: auto;   /* Largura automática para manter proporção */
+    /* Design Original */
+    max-height: 60px; 
+    width: auto;
 }
 
 .titulo-header {
-    /* Garante que o título ocupe o espaço necessário */
-    flex: 1; 
+    text-align: right; /* Título alinhado à direita */
 }
 
 .titulo-header h1 {
@@ -75,6 +74,7 @@ body {
 }
 
 /* ESTILOS DA CAIXA (Slide Box)
+  Aqui está o "fundo box azul 5%"
 */
 .slide-box {
     background-color: var(--fundo-box);
@@ -133,14 +133,14 @@ body {
 }
 
 
-/* ESTILOS DO RODAPÉ (Footer) - ATUALIZADO
+/* ESTILOS DO RODAPÉ (Footer) - Design Original Adaptado
 */
 .footer-ctb {
     background-color: var(--azul-escuro);
     color: var(--texto-branco);
     padding: 30px 5%;
     display: flex;
-    justify-content: space-between; /* Isso alinha os 3 itens: esquerda, centro, direita */
+    justify-content: space-between; /* Alinha os 3 itens (esquerda, centro, direita) */
     align-items: center;
     margin-top: 40px;
 }
@@ -150,25 +150,25 @@ body {
     margin-bottom: 5px;
 }
 
-/* NOVO: Estilo para o logo central do LinkedIn */
+/* ADIÇÃO: Estilo para o logo central do LinkedIn */
 .linkedin-footer {
     text-align: center;
 }
 
 .logo-linkedin {
-    height: 50px; /* Um bom tamanho para o ícone central */
+    height: 50px; /* Tamanho do ícone central */
     width: auto;
-    border-radius: 8px; /* Arredondamento suave */
+    border-radius: 8px;
     transition: opacity 0.3s ease;
 }
 
 .logo-linkedin:hover {
-    opacity: 0.8; /* Efeito ao passar o mouse */
+    opacity: 0.8;
 }
 
+/* ADIÇÃO: Garantindo o tamanho da logo do rodapé */
 .logo-footer {
-    /* ATUALIZADO: Conforme solicitado */
-    height: 70px; 
-    width: auto;  /* Largura automática */
+    height: 70px; /* Tamanho da logo da direita (ctb1.png) */
+    width: auto;
     opacity: 0.8;
 }
