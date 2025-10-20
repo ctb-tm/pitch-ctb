@@ -1,329 +1,207 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infográfico CTB - Clube dos Tenistas da Bahia</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --azul-esporte: #004aad;
-            --azul-escuro: #001a33;
-            --verde-tecnologia: #00ff8a;
-            --fundo-pagina: #f4f7fa;
-            --fundo-box: rgba(0, 74, 173, 0.05);
-            --texto-padrao: #333;
-            --texto-branco: #fff;
-        }
-        body {
-            background: var(--fundo-pagina);
-            color: var(--texto-padrao);
-            font-family: 'Poppins', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: var(--azul-escuro);
-            color: var(--texto-branco);
-            padding: 20px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .header-content {
-            flex: 1;
-        }
-        header h1 {
-            color: var(--azul-esporte);
-            font-weight: 700;
-            font-size: 2rem;
-            margin: 0 0 8px 0;
-        }
-        .header-img {
-            height: 120px;
-            width: auto;
-            margin-left: 24px;
-        }
-        .img-capa-box {
-            width: 100%;
-            margin: 0 auto 32px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .img-capa {
-            width: 100%;
-            max-width: 800px;
-            aspect-ratio: 16/9;
-            height: auto;
-            display: block;
-            border-radius: 18px;
-            box-shadow: 0px 5px 32px rgba(0,74,173,0.10);
-            margin-top: 0;
-        }
-        main {
-            width: 90%;
-            max-width: 1100px;
-            margin: 30px auto 0 auto;
-            display: grid;
-            gap: 30px;
-        }
-        .section-box {
-            background: var(--fundo-box);
-            border: 1px solid rgba(0,74,173,0.12);
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-            padding: 30px;
-        }
-        .section-box h2 {
-            color: var(--azul-esporte);
-            border-bottom: 2px solid var(--verde-tecnologia);
-            padding-bottom: 6px;
-            margin-bottom: 16px;
-            font-weight: 600;
-        }
-        .impacto, .chamada, .tabela {
-            background: var(--azul-esporte);
-            color: var(--texto-branco);
-            border: none !important;
-        }
-        .chamada h2, .impacto h2 {
-            color: var(--texto-branco);
-            border-bottom: 2px solid var(--verde-tecnologia);
-        }
-        .tabela table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 18px 0 0 0;
-        }
-        .tabela th {
-            background: var(--verde-tecnologia);
-            color: var(--azul-escuro);
-            font-weight: 700;
-            padding: 10px;
-        }
-        .tabela td {
-            background: var(--texto-branco);
-            color: var(--texto-padrao);
-            border-bottom: 1px solid #eaeaea;
-            padding: 10px;
-            text-align: center;
-        }
-        footer {
-            background: var(--azul-escuro);
-            color: var(--texto-branco);
-            padding: 24px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .rodape-contato {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-        }
-        .rodape-contato p {
-            margin: 0 0 6px 0;
-            font-size: 1.1rem;
-        }
-        .linkedin-centro {
-            flex: 1;
-            text-align: center;
-        }
-        .rodape-img {
-            height: 70px;
-            width: auto;
-            margin-left: 24px;
-        }
-        .linkedin-img {
-            height: 54px;
-            width: auto;
-            vertical-align: middle;
-            border-radius: 8px;
-            box-shadow: 0px 2px 12px rgba(0,74,173,0.18);
-            transition: transform 0.2s;
-        }
-        .linkedin-img:hover {
-            transform: scale(1.09);
-        }
-        @media (max-width: 900px) {
-            .img-capa { max-width: 98vw; }
-            main { width: 98%; }
-        }
-        @media (max-width: 800px) {
-            header, footer {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .header-img, .rodape-img { margin-left: 0; }
-            .linkedin-centro { margin: 14px 0; }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <h1>🎾 Canvas CTB - Clube dos Tenistas da Bahia</h1>
-            <p>Inovação, formação e impacto social através do esporte</p>
-        </div>
-        <img src="ctb1.png" alt="Logo CTB" class="header-img">
-    </header>
-    <div class="img-capa-box">
-        <img src="capactb.png" alt="Capa CTB" class="img-capa">
+<!-- Infográfico CTB - Clube dos Tenistas da Bahia 2025 -->
+<style>
+.ctb-infografico {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f7f7fa;
+  border-radius: 20px;
+  max-width: 940px;
+  margin: 32px auto;
+  padding: 32px 40px 32px 40px;
+  color: #222;
+  box-shadow: 0 6px 22px #0001;
+}
+.ctb-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+.ctb-header h1 {
+  color: #1253a3;
+  font-size: 2.3em;
+  margin-bottom: 0.2em;
+}
+.ctb-header h3 {
+  color: #2d2c32;
+  font-weight: 400;
+  font-size: 1.1em;
+}
+.ctb-section {
+  margin: 18px 0 18px 0;
+  padding-bottom: 8px;
+  border-left: 5px solid #17909e;
+  background: #fff;
+  padding-left: 26px;
+  border-radius: 6px;
+}
+.ctb-section h2 {
+  color: #17909e;
+  font-size: 1.31em;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+.ctb-list {
+  margin-left: 0;
+  padding-left: 20px;
+}
+.ctb-list li {
+  margin-bottom: 4px;
+  padding-left: 2px;
+}
+.ctb-kpi-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.ctb-kpi {
+  flex:1 1 160px;
+  background:#f1f6fe;
+  color:#1253a3;
+  border-radius:10px;
+  text-align:center;
+  font-size:1.18em;
+  padding:20px 10px 10px 10px;
+  min-width:175px; 
+  margin: 6px 0;
+  font-weight: 500;
+}
+.ctb-parceiros {
+  display:flex; 
+  flex-wrap:wrap;
+  gap:10px 20px;
+  margin:14px 0 7px 0
+}
+.ctb-parceiros span {
+  display:inline-block; 
+  background:#eaf6ee;
+  color:#158277;
+  border-radius:5px;
+  padding:5px 12px;
+  margin-bottom:4px;
+  font-size:0.96em;
+}
+.ctb-contato {
+  margin-top:22px;
+  font-size:0.97em;
+  color:#222;
+}
+.ctb-metas span {
+  display:inline-block;
+  margin-right:12px;
+  font-size:1.07em;
+  color:#1f679e;
+}
+@media (max-width: 700px){
+  .ctb-infografico{padding:10px; max-width:97vw;}
+  .ctb-header h1{font-size:1.1em}
+  .ctb-kpi-grid{flex-direction:column;}
+}
+</style>
+<div class="ctb-infografico">
+  <div class="ctb-header">
+    <h1>CTB - Clube dos Tenistas da Bahia</h1>
+    <h3>
+      Referência em transformação social, esportiva e tecnológica em Salvador desde 2015.
+    </h3>
+    <h3 style="color:#2f8b45;font-weight:600;">
+      <span style="color:#1f679e;">#Esporte</span> #GestãoEsportiva #InovaçãoSocial #InteligênciaArtificial #Tênis #ODS #ImpactoSocial
+    </h3>
+  </div>
+  <div class="ctb-section">
+    <h2>Quem Somos</h2>
+    <div>
+      Fundado por três tenistas e um mesatenista, o CTB é o primeiro clube da Bahia com modelo de negócios focado em atividades esportivas gratuitas viabilizadas por leis incentivadas, promovendo tênis e tênis de mesa. <br>
+      Nossa missão: <b>Formar pessoas através do esporte e da tecnologia.</b><br>
+      Visão: <b>Ser referência nacional em gestão esportiva e inovação tecnológica.</b><br>
+      Valores: <b>Ética</b>, <b>inclusão</b>, <b>disciplina</b>, <b>inovação</b>, <b>performance</b>.
     </div>
-    <main>
-        <section class="section-box">
-            <h2>O Propósito</h2>
-            <ul>
-                <li><strong>Missão:</strong> Formar pessoas através do esporte e da tecnologia.</li>
-                <li><strong>Visão:</strong> Referência nacional em gestão esportiva e inovação tecnológica em tênis e tênis de mesa.</li>
-                <li><strong>Valores:</strong> Ética, inclusão, disciplina, inovação, performance.</li>
-            </ul>
-        </section>
-        <section class="section-box">
-            <h2>O Desafio</h2>
-            <ul>
-                <li>Formação estruturada desde a base</li>
-                <li>Integração entre esporte e educação</li>
-                <li>Gestão moderna e sustentável</li>
-                <li>Tecnologias aplicadas à performance e captação</li>
-            </ul>
-            <p>O CTB responde estrategicamente a este cenário com inovação e impacto social.</p>
-        </section>
-        <section class="section-box">
-            <h2>Nossa Solução</h2>
-            <ul>
-                <li>Gestão esportiva híbrida: base até alto rendimento</li>
-                <li>Projetos sociais em escolas públicas</li>
-                <li>Plataformas tecnológicas (IA, análise de movimento, gamificação)</li>
-                <li>Captação via Lei de Incentivo ao Esporte</li>
-                <li>Eventos, clínicas e torneios comunitários</li>
-            </ul>
-        </section>
-        <section class="section-box tabela">
-            <h2>Modelos de Gestão e Fontes de Receita</h2>
-            <table>
-                <tr>
-                    <th>Receitas Próprias</th>
-                    <th>Receitas Incentivadas</th>
-                    <th>Outros</th>
-                </tr>
-                <tr>
-                    <td>Mensalidades esportivas</td>
-                    <td>Lei de Incentivo</td>
-                    <td>Cursos, workshops, conteúdo digital</td>
-                </tr>
-                <tr>
-                    <td>Eventos e torneios</td>
-                    <td>Patrocínio e naming rights</td>
-                    <td>Plataformas digitais</td>
-                </tr>
-            </table>
-            <p><strong>Canais:</strong> Sede CTB, escolas, plataformas digitais, redes sociais e torneios presenciais.</p>
-        </section>
-        <section class="section-box">
-            <h2>Tecnologia e Inovação</h2>
-            <ul>
-                <li>Análise de desempenho com visão computacional</li>
-                <li>Machine Learning para prevenção de lesões</li>
-                <li>Gestão e gamificação de atletas</li>
-                <li>Métricas de treino em tempo real</li>
-            </ul>
-            <p>Uso de hubs e parcerias tecnológicas para potencializar resultados e engajamento.</p>
-        </section>
-        <section class="section-box">
-            <h2>Estrutura e Equipe</h2>
-            <ul>
-                <li>Sede equipada: quadras e salas</li>
-                <li>Professores/técnicos certificados</li>
-                <li>Gestão focada em resultado e impacto</li>
-                <li>Comunicação e inovação digital integrada</li>
-            </ul>
-        </section>
-        <section class="section-box impacto">
-            <h2>Impacto Social e Educacional</h2>
-            <ul>
-                <li>+800 jovens formados no Projeto Iniciação Olímpica</li>
-                <li>Parcerias em Salvador, Camaçari, Barrocas e Teofilândia</li>
-                <li>ODS alinhados: 3, 4, 8 e 10</li>
-                <li>Transformação real de vidas pelo esporte</li>
-            </ul>
-        </section>
-        <section class="section-box tabela">
-            <h2>Parcerias-Chave</h2>
-            <table>
-                <tr>
-                    <th>Institucional</th>
-                    <th>Empresas</th>
-                    <th>Tecnologia</th>
-                </tr>
-                <tr>
-                    <td>Fed. Baiana de Tênis de Mesa</td>
-                    <td>Patrocinadores/apoio</td>
-                    <td>Hubs e plataformas</td>
-                </tr>
-                <tr>
-                    <td>Sudesb, Prefeituras</td>
-                    <td>Universidades parceiras</td>
-                    <td>Startups esportivas</td>
-                </tr>
-            </table>
-        </section>
-        <section class="section-box">
-            <h2>Sustentabilidade Financeira</h2>
-            <ul>
-                <li>60% receitas próprias</li>
-                <li>40% recursos incentivados e patrocínios</li>
-            </ul>
-            <p>Gestão baseada em indicadores, transparência e impacto.</p>
-        </section>
-        <section class="section-box tabela">
-            <h2>Projeções e Resultados</h2>
-            <table>
-                <tr>
-                    <th>Indicador</th>
-                    <th>Meta</th>
-                    <th>Prazo</th>
-                </tr>
-                <tr>
-                    <td>Crescimento de alunos</td>
-                    <td>+30%/ano</td>
-                    <td>Anual</td>
-                </tr>
-                <tr>
-                    <td>Captação via LIE</td>
-                    <td>R$ 3 milhões</td>
-                    <td>até 2026</td>
-                </tr>
-                <tr>
-                    <td>Polos de iniciação</td>
-                    <td>10 no estado</td>
-                    <td>até 2026</td>
-                </tr>
-                <tr>
-                    <td>Crianças impactadas</td>
-                    <td>1.000</td>
-                    <td>até 2026</td>
-                </tr>
-            </table>
-        </section>
-        <section class="section-box chamada">
-            <h2>Junte-se ao CTB!</h2>
-            <p>Invista em um modelo esportivo sustentável e transformador.</p>
-            <p style="font-size:1.2rem; color:var(--verde-tecnologia);margin-top:15px;font-weight:700;text-align:center;">“Esporte é mais do que movimento — é transformação social.”</p>
-        </section>
-    </main>
-    <footer>
-        <div class="rodape-contato">
-            <p>📧 paulo@ctb-ba.com.br</p>
-            <p>🌐 www.ctb-ba.com.br</p>
-        </div>
-        <div class="linkedin-centro">
-            <a href="https://www.linkedin.com/in/paulocarneiropfeira/" target="_blank">
-                <img src="ctblinkedin.jpg" alt="LinkedIn Paulo Carneiro" class="linkedin-img">
-            </a>
-        </div>
-        <img src="ctb1.png" alt="Logo CTB Rodapé" class="rodape-img">
-    </footer>
-</body>
-</html>
+  </div>
+  <div class="ctb-section">
+    <h2>Impacto Social Comprovado</h2>
+    <div class="ctb-kpi-grid">
+      <div class="ctb-kpi">
+        +800 jovens formados<br>
+        <small>Projetos Educar e Estudar com Tênis de Mesa</small>
+      </div>
+      <div class="ctb-kpi">
+        4 cidades atendidas<br>
+        <small>Salvador, Camaçari, Barrocas, Teofilândia</small>
+      </div>
+      <div class="ctb-kpi">
+        560 alunos inscritos<br>
+        <small>(incluindo 60 PCDs da APAE)</small>
+      </div>
+      <div class="ctb-kpi">
+        Alinhamento aos ODS ONU<br>
+        <small>(Saúde, Educação, Trabalho, Redução de Desigualdades)</small>
+      </div>
+    </div>
+    <div>
+      Nosso projeto "Estudar na Bahia com Tênis de Mesa" gerou oportunidades esportivas e de cidadania, formando jovens talentos como Iuki Alves ("Tricampeão baiano" e medalhista nacional, hoje CLT na área).
+    </div>
+  </div>
+  <div class="ctb-section">
+    <h2>Modelo de Gestão Híbrido e Sustentável</h2>
+    <ul class="ctb-list">
+      <li>✅ Formação esportiva da base ao alto rendimento</li>
+      <li>✅ Projetos sociais em escolas públicas e comunidades</li>
+      <li>✅ Captação pela Lei de Incentivo ao Esporte</li>
+      <li>✅ Eventos, clínicas e torneios integrados</li>
+      <li>✅ Tecnologia aplicada à performance e gestão</li>
+    </ul>
+    <div>
+      Hoje, 90% dos recursos vêm de Leis de Incentivo. Meta: atingir 60% de receitas próprias e 40% de receitas incentivadas.<br>
+      Compromisso com transparência e impacto medido.
+    </div>
+  </div>
+  <div class="ctb-section">
+    <h2>Inovação e Tecnologia</h2>
+    <ul class="ctb-list">
+      <li>🔹 Análise de desempenho com visão computacional</li>
+      <li>🔹 Machine Learning para prevenção de lesões</li>
+      <li>🔹 Sistema de gestão e gamificação de atletas</li>
+      <li>🔹 Monitoramento de métricas de treino em tempo real</li>
+    </ul>
+    <div>
+      Integrando IA ao tênis e tênis de mesa, promovemos treinos personalizados, prevenção de lesões e performance máxima.
+    </div>
+  </div>
+  <div class="ctb-section">
+    <h2>Parcerias Estratégicas</h2>
+    <div class="ctb-parceiros">
+      <span>🤝 Federação Baiana de Tênis de Mesa</span>
+      <span>🏛️ Prefeituras Municipais</span>
+      <span>🏫 Escolas públicas & universidades</span>
+      <span>💼 Equinox Gold, Itaú, BASF</span>
+      <span>🌐 Plataformas Prosas, CX, AR Lie</span>
+    </div>
+    <div>
+      Parcerias com instituições públicas e privadas ampliam nosso alcance e qualidade técnica.
+    </div>
+  </div>
+  <div class="ctb-section">
+    <h2>Proposta de Valor</h2>
+    <ul class="ctb-list">
+      <li>Para atletas e famílias: Educação esportiva completa e acompanhamento técnico de excelência</li>
+      <li>Para empresas e investidores: Retorno de imagem, impacto social mensurável e dedução fiscal (<b>até 7% PF e 2% PJ</b>)</li>
+      <li>Para governos e instituições: Projetos alinhados a ODS e políticas públicas</li>
+    </ul>
+  </div>
+  <div class="ctb-section">
+    <h2>Metas Ambiciosas para 2026-27</h2>
+    <div class="ctb-metas">
+      <span>📈 +30% alunos/ano</span>
+      <span>💰 R$ 3 milhões via LIE</span>
+      <span>👟 10 polos esportivos</span>
+      <span>🎯 1.000 crianças impactadas até 2027</span>
+    </div>
+  </div>
+  <div class="ctb-section" style="background: #e2f4fc;">
+    <b>Junte-se à transformação!</b><br>
+    <span style="font-size:1.08em;">O CTB representa um novo paradigma ético, inovador, sustentável e transformador. Invista, apoie e faça parte desse movimento!</span>
+  </div>
+  <div class="ctb-contato">
+    <b>📍 Salvador, Bahia &nbsp;&nbsp;🌐 <a href="http://ctb-ba.com.br/" target="_blank">ctb-ba.com.br</a><br>
+    📧 Contato: Paulo Carneiro - CEO</b><br>
+    <i>Esporte é mais que movimento — é transformação social.</i>
+  </div>
+</div>
