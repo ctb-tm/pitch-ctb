@@ -7,7 +7,7 @@
     --verde-tecnologia: #00ff8a; /* Verde neon para destaques */
     --fundo-pagina: #f4f7fa; /* Cinza bem claro (Web 3.0 clean) */
     
-    /* NOVAS VARIÁVEIS DE FUNDO BOX (conforme solicitado) */
+    /* VARIÁVEIS DE FUNDO BOX */
     --fundo-box-3: rgba(0, 74, 173, 0.03); /* Fundo da tabela (interno) */
     --fundo-box-5: rgba(0, 74, 173, 0.05); /* Fundo de seções de texto */
     --fundo-box-10: rgba(0, 74, 173, 0.10);/* Fundo de seções com tabela (externo) */
@@ -35,7 +35,7 @@ body {
     line-height: 1.6;
 }
 
-/* ESTILOS DO CABEÇALHO (Header) - Design Original
+/* ESTILOS DO CABEÇALHO (Header)
 */
 .header-ctb {
     background-color: var(--texto-branco);
@@ -68,30 +68,58 @@ body {
     color: #555;
 }
 
+/* NOVOS ESTILOS PARA A IMAGEM DE CAPA (16:9)
+*/
+.secao-capa {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto; /* Centraliza a caixa branca */
+    background-color: var(--texto-branco); /* Fundo branco */
+    padding: 20px; /* Espaçamento interno da caixa branca */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.capa-aspect-ratio {
+    position: relative;
+    width: 100%;
+    /* Truque de CSS para forçar a proporção 16:9 (9 / 16 = 0.5625) */
+    padding-top: 56.25%; 
+    border-radius: 8px; /* Arredonda cantos do contêiner da imagem */
+    overflow: hidden; /* Esconde partes da imagem que sobrarem */
+}
+
+.imagem-capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir a área, cortando se necessário */
+}
+
 /* ESTILOS DO CONTEÚDO PRINCIPAL (Main)
 */
 .container-principal {
     width: 90%; 
     max-width: 1100px; 
-    margin: 30px auto; 
+    margin: 30px auto; /* Margem padrão */
     display: grid;
     gap: 25px; /* Espaço entre as caixas */
 }
 
 /* ESTILOS DA CAIXA (Slide Box) - Fundo 5%
-   Usada para seções de texto puro.
 */
 .slide-box {
     background-color: var(--fundo-box-5); /* Fundo 5% */
     border: 1px solid var(--borda-cor);
     padding: 30px;
-    border-radius: 12px; /* Cantos arredondados "Web 3.0" */
+    border-radius: 12px; 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* NOVA CAIXA DE TABELA - Fundo 10%
-   Usada para seções que contêm tabelas.
+/* CAIXA DE TABELA - Fundo 10%
 */
 .slide-box-table {
     background-color: var(--fundo-box-10); /* Fundo 10% (Externo) */
@@ -131,18 +159,17 @@ body {
     color: #555;
 }
 
-/* NOVOS ESTILOS DE TABELA
+/* ESTILOS DE TABELA
 */
 .ctb-table {
     width: 100%;
-    border-collapse: collapse; /* Bordas limpas */
+    border-collapse: collapse; 
     margin-top: 20px;
-    border-radius: 8px; /* Arredonda cantos da tabela */
-    overflow: hidden;   /* Garante que o radius funcione */
+    border-radius: 8px; 
+    overflow: hidden;   
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Cabeçalho da Tabela (ex: Proposta de Valor) */
 .ctb-table th {
     background-color: var(--azul-esporte);
     color: var(--texto-branco);
@@ -151,22 +178,19 @@ body {
     font-weight: 600;
 }
 
-/* Linhas da Tabela (Corpo) */
 .ctb-table tr {
     background-color: var(--fundo-box-3); /* Fundo 3% (Interno) */
     border-bottom: 1px solid var(--borda-cor);
 }
 
-/* Alterna cor de fundo para melhor leitura */
 .ctb-table tr:nth-child(even) {
     background-color: var(--fundo-box-5); /* Usa o 5% para alternar */
 }
 
 .ctb-table tr:last-child {
-    border-bottom: none; /* Remove borda da última linha */
+    border-bottom: none; 
 }
 
-/* Efeito hover nas linhas */
 .ctb-table tr:hover {
     background-color: var(--fundo-box-10);
 }
@@ -176,13 +200,11 @@ body {
     vertical-align: top;
 }
 
-/* Estilo para a primeira coluna (ex: Missão, Visão...) */
 .ctb-table:not(.simple-list) td:first-child {
     font-weight: 600;
     color: var(--azul-esporte);
-    width: 25%; /* Define uma largura fixa */
+    width: 25%; 
 }
-
 
 /* Destaque para a "Chamada à Ação" */
 .action-call {
@@ -201,7 +223,7 @@ body {
     margin-top: 20px;
 }
 
-/* ESTILOS DO RODAPÉ (Footer) - ATUALIZADO
+/* ESTILOS DO RODAPÉ (Footer)
 */
 .footer-ctb {
     background-color: var(--azul-escuro);
