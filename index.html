@@ -44,10 +44,27 @@
             width: auto;
             margin-left: 24px;
         }
+        .img-capa-box {
+            width: 100%;
+            margin: 0 auto 32px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img-capa {
+            width: 100%;
+            max-width: 800px;
+            aspect-ratio: 16/9;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+            box-shadow: 0px 5px 32px rgba(0,74,173,0.10);
+            margin-top: 0;
+        }
         main {
             width: 90%;
             max-width: 1100px;
-            margin: 30px auto;
+            margin: 30px auto 0 auto;
             display: grid;
             gap: 30px;
         }
@@ -129,9 +146,11 @@
         .linkedin-img:hover {
             transform: scale(1.09);
         }
-        @media (max-width: 800px) {
+        @media (max-width: 900px) {
+            .img-capa { max-width: 98vw; }
             main { width: 98%; }
-            .section-box, header, footer { padding: 16px 3%; }
+        }
+        @media (max-width: 800px) {
             header, footer {
                 flex-direction: column;
                 align-items: flex-start;
@@ -149,6 +168,9 @@
         </div>
         <img src="ctb1.png" alt="Logo CTB" class="header-img">
     </header>
+    <div class="img-capa-box">
+        <img src="ctbcapa.png" alt="Capa CTB" class="img-capa">
+    </div>
     <main>
         <section class="section-box">
             <h2>O Propósito</h2>
@@ -270,7 +292,7 @@
                 </tr>
                 <tr>
                     <td>Captação via LIE</td>
-                    <td>R$ 2,5 milhão</td>
+                    <td>R$ 1,5 milhão</td>
                     <td>até 2026</td>
                 </tr>
                 <tr>
@@ -293,7 +315,7 @@
     </main>
     <footer>
         <div class="rodape-contato">
-            <p>📧 paulo@ctb-ba.com.br</p>
+            <p>📧 contato@ctb-ba.com.br</p>
             <p>🌐 www.ctb-ba.com.br</p>
         </div>
         <div class="linkedin-centro">
