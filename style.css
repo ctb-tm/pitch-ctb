@@ -1,4 +1,4 @@
-/* Definição das variáveis de cor para fácil manutenção
+/* Definição das variáveis de cor
   Baseado na identidade "azul esporte + verde tecnologia"
 */
 :root {
@@ -6,9 +6,15 @@
     --azul-escuro: #001a33;  /* Para o rodapé */
     --verde-tecnologia: #00ff8a; /* Verde neon para destaques */
     --fundo-pagina: #f4f7fa; /* Cinza bem claro (Web 3.0 clean) */
-    --fundo-box: rgba(0, 74, 173, 0.05); /* O "fundo box azul 5%" */
+    
+    /* NOVAS VARIÁVEIS DE FUNDO BOX (conforme solicitado) */
+    --fundo-box-3: rgba(0, 74, 173, 0.03); /* Fundo da tabela (interno) */
+    --fundo-box-5: rgba(0, 74, 173, 0.05); /* Fundo de seções de texto */
+    --fundo-box-10: rgba(0, 74, 173, 0.10);/* Fundo de seções com tabela (externo) */
+
     --texto-padrao: #333;
     --texto-branco: #ffffff;
+    --borda-cor: rgba(0, 74, 173, 0.1);
 }
 
 /* Reset básico e definição da fonte principal */
@@ -33,7 +39,7 @@ body {
 */
 .header-ctb {
     background-color: var(--texto-branco);
-    padding: 20px 5%; /* 5% de margem nas laterais */
+    padding: 20px 5%; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,23 +48,22 @@ body {
 }
 
 .logo-header {
-    /* Design Original */
     max-height: 60px; 
     width: auto;
 }
 
 .titulo-header {
-    text-align: right; /* Título alinhado à direita */
+    text-align: right; 
 }
 
 .titulo-header h1 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem; 
     color: var(--azul-esporte);
     font-weight: 700;
 }
 
 .titulo-header h2 {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem; 
     font-weight: 300;
     color: #555;
 }
@@ -66,64 +71,128 @@ body {
 /* ESTILOS DO CONTEÚDO PRINCIPAL (Main)
 */
 .container-principal {
-    width: 90%; /* 90% da largura da tela */
-    max-width: 1100px; /* Limite máximo para telas grandes */
-    margin: 30px auto; /* Centraliza o conteúdo com 30px de margem em cima/baixo */
+    width: 90%; 
+    max-width: 1100px; 
+    margin: 30px auto; 
     display: grid;
-    gap: 25px; /* Espaço entre as caixas (slides) */
+    gap: 25px; /* Espaço entre as caixas */
 }
 
-/* ESTILOS DA CAIXA (Slide Box)
-  Aqui está o "fundo box azul 5%"
+/* ESTILOS DA CAIXA (Slide Box) - Fundo 5%
+   Usada para seções de texto puro.
 */
 .slide-box {
-    background-color: var(--fundo-box);
-    border: 1px solid rgba(0, 74, 173, 0.1);
+    background-color: var(--fundo-box-5); /* Fundo 5% */
+    border: 1px solid var(--borda-cor);
     padding: 30px;
     border-radius: 12px; /* Cantos arredondados "Web 3.0" */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* NOVA CAIXA DE TABELA - Fundo 10%
+   Usada para seções que contêm tabelas.
+*/
+.slide-box-table {
+    background-color: var(--fundo-box-10); /* Fundo 10% (Externo) */
+    border: 1px solid var(--borda-cor);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 /* Efeito sutil ao passar o mouse */
-.slide-box:hover {
+.slide-box:hover,
+.slide-box-table:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 74, 173, 0.07);
 }
 
-.slide-box h2 {
+.slide-box h2,
+.slide-box-table h2 {
     color: var(--azul-esporte);
     font-weight: 600;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 2px solid var(--verde-tecnologia); /* Destaque verde */
-    display: inline-block; /* Faz a borda ficar só no texto */
+    border-bottom: 2px solid var(--verde-tecnologia); 
+    display: inline-block; 
 }
 
-.slide-box p {
+.slide-box p,
+.slide-box-table p {
     margin-bottom: 15px;
 }
 
-.slide-box ul {
-    margin-left: 20px;
-    margin-bottom: 15px;
+.legenda-tabela {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
 }
 
-.slide-box li {
-    margin-bottom: 8px;
+/* NOVOS ESTILOS DE TABELA
+*/
+.ctb-table {
+    width: 100%;
+    border-collapse: collapse; /* Bordas limpas */
+    margin-top: 20px;
+    border-radius: 8px; /* Arredonda cantos da tabela */
+    overflow: hidden;   /* Garante que o radius funcione */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
+
+/* Cabeçalho da Tabela (ex: Proposta de Valor) */
+.ctb-table th {
+    background-color: var(--azul-esporte);
+    color: var(--texto-branco);
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Linhas da Tabela (Corpo) */
+.ctb-table tr {
+    background-color: var(--fundo-box-3); /* Fundo 3% (Interno) */
+    border-bottom: 1px solid var(--borda-cor);
+}
+
+/* Alterna cor de fundo para melhor leitura */
+.ctb-table tr:nth-child(even) {
+    background-color: var(--fundo-box-5); /* Usa o 5% para alternar */
+}
+
+.ctb-table tr:last-child {
+    border-bottom: none; /* Remove borda da última linha */
+}
+
+/* Efeito hover nas linhas */
+.ctb-table tr:hover {
+    background-color: var(--fundo-box-10);
+}
+
+.ctb-table td {
+    padding: 15px;
+    vertical-align: top;
+}
+
+/* Estilo para a primeira coluna (ex: Missão, Visão...) */
+.ctb-table:not(.simple-list) td:first-child {
+    font-weight: 600;
+    color: var(--azul-esporte);
+    width: 25%; /* Define uma largura fixa */
+}
+
 
 /* Destaque para a "Chamada à Ação" */
 .action-call {
     background-color: var(--azul-esporte);
     color: var(--texto-branco);
 }
-
 .action-call h2 {
     color: var(--texto-branco);
     border-bottom-color: var(--verde-tecnologia);
 }
-
 .action-call .lema {
     font-size: 1.1rem;
     font-weight: 600;
@@ -132,15 +201,14 @@ body {
     margin-top: 20px;
 }
 
-
-/* ESTILOS DO RODAPÉ (Footer) - Design Original Adaptado
+/* ESTILOS DO RODAPÉ (Footer) - ATUALIZADO
 */
 .footer-ctb {
     background-color: var(--azul-escuro);
     color: var(--texto-branco);
     padding: 30px 5%;
     display: flex;
-    justify-content: space-between; /* Alinha os 3 itens (esquerda, centro, direita) */
+    justify-content: space-between; 
     align-items: center;
     margin-top: 40px;
 }
@@ -149,26 +217,26 @@ body {
     font-weight: 300;
     margin-bottom: 5px;
 }
+.contatos-footer p strong {
+    font-weight: 600;
+    color: var(--verde-tecnologia);
+}
 
-/* ADIÇÃO: Estilo para o logo central do LinkedIn */
 .linkedin-footer {
     text-align: center;
 }
-
 .logo-linkedin {
-    height: 50px; /* Tamanho do ícone central */
+    height: 50px; 
     width: auto;
     border-radius: 8px;
     transition: opacity 0.3s ease;
 }
-
 .logo-linkedin:hover {
     opacity: 0.8;
 }
 
-/* ADIÇÃO: Garantindo o tamanho da logo do rodapé */
 .logo-footer {
-    height: 70px; /* Tamanho da logo da direita (ctb1.png) */
+    height: 70px; 
     width: auto;
     opacity: 0.8;
 }
